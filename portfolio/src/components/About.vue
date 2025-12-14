@@ -22,10 +22,10 @@ onMounted(() => {
 })
 
 const stats = [
-  { icon: '🚀', value: '1', label: 'Startup Founded', suffix: '' },
-  { icon: '🏆', value: '15', label: 'Awards Won', suffix: '+' },
-  { icon: '📊', value: '6', label: 'AI Projects', suffix: '+' },
-  { icon: '👥', value: '50', label: 'People Mentored', suffix: '+' },
+  { icon: '🚀', value: '2', label: 'Startup Founded', suffix: '' },
+  { icon: '🏆', value: '30', label: 'Awards Won', suffix: '+' },
+  { icon: '📊', value: '40', label: 'AI Projects', suffix: '+' },
+  { icon: '👥', value: '100', label: 'People Mentored', suffix: '+' },
 ]
 </script>
 
