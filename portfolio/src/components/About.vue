@@ -1,9 +1,45 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import SectionTitle from './SectionTitle.vue'
 
 const isVisible = ref(false)
 const sectionRef = ref<HTMLElement | null>(null)
+const animatedValues = ref([0, 0, 0, 0])
+
+const stats = [
+  { icon: '🚀', value: 2, label: 'Startup Founded', suffix: '' },
+  { icon: '🏆', value: 30, label: 'Awards Won', suffix: '+' },
+  { icon: '📊', value: 40, label: 'AI Projects', suffix: '+' },
+  { icon: '👥', value: 100, label: 'People Mentored', suffix: '+' }
+]
+
+const animateCount = (index: number, target: number) => {
+  const duration = 1500
+  const steps = 60
+  const increment = target / steps
+  let current = 0
+  const interval = duration / steps
+
+  const timer = setInterval(() => {
+    current += increment
+    if (current >= target) {
+      animatedValues.value[index] = target
+      clearInterval(timer)
+    } else {
+      animatedValues.value[index] = Math.floor(current)
+    }
+  }, interval)
+}
+
+watch(isVisible, (newVal) => {
+  if (newVal) {
+    stats.forEach((stat, index) => {
+      setTimeout(() => {
+        animateCount(index, stat.value)
+      }, index * 150)
+    })
+  }
+})
 
 onMounted(() => {
   const observer = new IntersectionObserver(
@@ -15,18 +51,11 @@ onMounted(() => {
     },
     { threshold: 0.2 }
   )
-  
+
   if (sectionRef.value) {
     observer.observe(sectionRef.value)
   }
 })
-
-const stats = [
-  { icon: '🚀', value: '2', label: 'Startup Founded', suffix: '' },
-  { icon: '🏆', value: '30', label: 'Awards Won', suffix: '+' },
-  { icon: '📊', value: '40', label: 'AI Projects', suffix: '+' },
-  { icon: '👥', value: '100', label: 'People Mentored', suffix: '+' },
-]
 </script>
 
 <template>
@@ -57,7 +86,7 @@ const stats = [
             :style="{ transitionDelay: `${index * 100 + 200}ms` }"
           >
             <span class="text-3xl mb-3 block">{{ stat.icon }}</span>
-            <span class="text-3xl font-bold gradient-text">{{ stat.value }}{{ stat.suffix }}</span>
+            <span class="text-3xl font-bold gradient-text">{{ animatedValues[index] }}{{ stat.suffix }}</span>
             <span class="text-sm text-slate-400 block mt-1">{{ stat.label }}</span>
           </div>
         </div>
