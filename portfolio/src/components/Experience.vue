@@ -4,6 +4,11 @@ import SectionTitle from './SectionTitle.vue'
 
 const isVisible = ref(false)
 const sectionRef = ref<HTMLElement | null>(null)
+const expandedIndex = ref<number | null>(null)
+
+const toggleExpand = (index: number) => {
+  expandedIndex.value = expandedIndex.value === index ? null : index
+}
 
 onMounted(() => {
   const observer = new IntersectionObserver(
@@ -26,7 +31,13 @@ const experiences = [
     description: 'Leading government technology initiatives and digital transformation projects.',
     achievement: 'Reduced workload by automating document review with AI',
     type: 'work',
-    logo: 'https://pmuc.or.th/wp-content/uploads/2025/12/pmuc-th-logo.png'
+    logo: 'https://pmuc.or.th/wp-content/uploads/2025/12/pmuc-th-logo.png',
+    details: [
+      'Led cross-functional team of 5+ members for AI document automation',
+      'Implemented RAG-based system for procurement document review',
+      'Reduced manual review time by 70% through automation',
+      'Collaborated with stakeholders to define project requirements'
+    ]
   },
   {
     period: 'Jul 2025 - Sep 2025',
@@ -35,7 +46,13 @@ const experiences = [
     description: 'Research and development of machine learning solutions for energy optimization.',
     achievement: 'Engineered WattGraphNet achieving 40%+ cost savings',
     type: 'work',
-    logo: 'https://i0.wp.com/engineer.wu.ac.th/wp-content/uploads/2020/07/03-standard-abbreviation.png?fit=819%2C577&ssl=1'
+    logo: 'https://i0.wp.com/engineer.wu.ac.th/wp-content/uploads/2020/07/03-standard-abbreviation.png?fit=819%2C577&ssl=1',
+    details: [
+      'Developed WattGraphNet using Graph Neural Networks for energy prediction',
+      'Achieved 40%+ cost savings through optimized energy management',
+      'Built MLOps pipeline for model training and deployment',
+      'Published research findings and presented to faculty'
+    ]
   },
   {
     period: '2023 - Jan 2025',
@@ -44,7 +61,14 @@ const experiences = [
     description: 'Co-founded healthtech startup focused on AI-powered solutions for aphasia patients.',
     achievement: 'Developed "Uphasia Workflow" integrating Typhoon 1.5x LLM',
     type: 'work',
-    logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQEZuhJGLnStHA/company-logo_200_200/company-logo_200_200/0/1710917170075?e=2147483647&v=beta&t=FH0vKI4Alf14edphP2suSZ5qnqTPT5ztPUxfUa40xWk'
+    logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQEZuhJGLnStHA/company-logo_200_200/company-logo_200_200/0/1710917170075?e=2147483647&v=beta&t=FH0vKI4Alf14edphP2suSZ5qnqTPT5ztPUxfUa40xWk',
+    details: [
+      'Co-founded startup and led product development from ideation to launch',
+      'Integrated Typhoon 1.5x LLM with RAG for personalized therapy',
+      'Secured 850,000 THB funding through TechBite 5.0',
+      'Won multiple awards including Siriraj Hackathon 2nd Runner-up',
+      'Featured on TNN news for innovative healthcare solution'
+    ]
   },
   {
     period: 'Teaching Experience',
@@ -53,7 +77,13 @@ const experiences = [
     description: 'Teaching AI/ML fundamentals, mentoring students in project development and competition preparation.',
     achievement: 'Mentored students in AI/ML fundamentals and project development',
     type: 'teaching',
-    logo: 'https://avatars.githubusercontent.com/u/99741955?s=200&v=4'
+    logo: 'https://avatars.githubusercontent.com/u/99741955?s=200&v=4',
+    details: [
+      'Taught AI/ML fundamentals to 50+ students at AI Builders 5',
+      'Mentored POSN students at KMUTNB for programming competitions',
+      'Conducted workshops on Python, PyTorch, and NLP',
+      'Guided students through end-to-end ML project development'
+    ]
   }
 ]
 </script>
@@ -119,6 +149,40 @@ const experiences = [
               <div class="mt-4 flex items-start gap-2">
                 <span class="text-emerald-400">✓</span>
                 <span class="text-slate-400 text-sm">{{ exp.achievement }}</span>
+              </div>
+
+              <!-- Expand Button -->
+              <button
+                @click="toggleExpand(index)"
+                class="mt-4 flex items-center gap-2 text-sm text-primary-400 hover:text-primary-300 transition-colors"
+              >
+                <span>{{ expandedIndex === index ? 'Show less' : 'Show more' }}</span>
+                <svg
+                  :class="['w-4 h-4 transition-transform duration-300', expandedIndex === index ? 'rotate-180' : '']"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              <!-- Expandable Details -->
+              <div
+                :class="[
+                  'overflow-hidden transition-all duration-300',
+                  expandedIndex === index ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'
+                ]"
+              >
+                <ul class="space-y-2 pl-4 border-l-2 border-primary-500/30">
+                  <li
+                    v-for="(detail, detailIndex) in exp.details"
+                    :key="detailIndex"
+                    class="text-slate-400 text-sm"
+                  >
+                    {{ detail }}
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

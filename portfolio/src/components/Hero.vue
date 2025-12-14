@@ -61,10 +61,10 @@ const socialLinks = [
       <!-- CTA Buttons -->
       <div class="fade-in delay-400 flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
         <a
-          href="#projects"
+          href="#experience"
           class="px-8 py-3 bg-primary-600 hover:bg-primary-500 text-white font-semibold rounded-lg transition-all duration-300 glow-hover"
         >
-          View Projects
+          View Experience
         </a>
         <a
           href="#contact"
