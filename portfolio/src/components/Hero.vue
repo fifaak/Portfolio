@@ -83,7 +83,7 @@ const socialLinks = [
       </p>
 
       <!-- CTA Buttons -->
-      <div class="fade-in delay-400 flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+      <div class="fade-in delay-400 flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 relative z-20">
         <a
           href="#experience"
           class="px-8 py-3 bg-primary-600 hover:bg-primary-500 text-white font-semibold rounded-lg transition-all duration-300 glow-hover"
@@ -125,7 +125,7 @@ const socialLinks = [
       </div>
 
       <!-- Social Links -->
-      <div class="fade-in delay-500 flex items-center justify-center gap-6">
+      <div class="fade-in delay-500 flex items-center justify-center gap-6 relative z-10">
         <a
           v-for="social in socialLinks"
           :key="social.name"
