@@ -90,30 +90,27 @@ const experiences = [
 
 <template>
   <section id="experience" ref="sectionRef" class="py-20 bg-slate-900/50">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <SectionTitle title="Work Experience" subtitle="My journey" />
 
       <div class="relative">
         <!-- Timeline line -->
-        <div
-          class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-500 via-purple-500 to-primary-500/20"
-        ></div>
+        <div class="absolute left-[7px] top-2 bottom-2 w-0.5 bg-gradient-to-b from-primary-500 via-purple-500 to-slate-700"></div>
 
-        <div class="space-y-12">
+        <div class="space-y-8">
           <div
             v-for="(exp, index) in experiences"
             :key="exp.title"
             :class="[
-              'relative transition-all duration-500',
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10',
-              index % 2 === 0 ? 'md:pr-1/2' : 'md:pl-1/2 md:ml-auto'
+              'relative pl-8 transition-all duration-500',
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             ]"
             :style="{ transitionDelay: `${index * 150}ms` }"
           >
             <!-- Timeline dot -->
             <div
               :class="[
-                'absolute left-4 md:left-1/2 w-4 h-4 rounded-full border-4 -translate-x-1/2',
+                'absolute left-0 top-6 w-4 h-4 rounded-full border-4',
                 exp.type === 'teaching'
                   ? 'bg-emerald-500 border-emerald-400'
                   : 'bg-primary-500 border-primary-400'
@@ -121,12 +118,7 @@ const experiences = [
             ></div>
 
             <!-- Content card -->
-            <div
-              :class="[
-                'ml-12 md:ml-0 p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 hover:border-primary-500/30 transition-all duration-300',
-                index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'
-              ]"
-            >
+            <div class="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 hover:border-primary-500/30 transition-all duration-300">
               <div class="flex items-start gap-4">
                 <!-- Company Logo -->
                 <div
