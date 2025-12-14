@@ -107,7 +107,8 @@ const socialLinks = [
           </button>
           <div
             v-if="isDropdownOpen"
-            class="absolute top-full mt-2 left-0 right-0 bg-slate-900 border border-slate-600 rounded-lg overflow-hidden shadow-2xl z-50"
+            class="absolute top-full mt-2 left-0 right-0 rounded-lg overflow-hidden shadow-2xl z-50"
+            style="background-color: #1e293b;"
           >
             <a
               v-for="link in profileLinks"
@@ -115,7 +116,7 @@ const socialLinks = [
               :href="link.url"
               target="_blank"
               rel="noopener noreferrer"
-              class="block px-4 py-3 text-slate-200 hover:bg-primary-600 hover:text-white transition-colors text-sm font-medium"
+              class="block px-4 py-3 text-white hover:bg-primary-600 transition-colors text-sm font-medium border-b border-slate-700 last:border-b-0"
             >
               {{ link.name }}
             </a>
