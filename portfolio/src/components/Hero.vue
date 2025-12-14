@@ -1,4 +1,28 @@
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from 'vue'
+
+const isDropdownOpen = ref(false)
+const dropdownRef = ref<HTMLElement | null>(null)
+
+const closeDropdown = (e: MouseEvent) => {
+  if (dropdownRef.value && !dropdownRef.value.contains(e.target as Node)) {
+    isDropdownOpen.value = false
+  }
+}
+
+onMounted(() => {
+  document.addEventListener('click', closeDropdown)
+})
+
+onUnmounted(() => {
+  document.removeEventListener('click', closeDropdown)
+})
+
+const profileLinks = [
+  { name: 'CV / Resume', url: 'https://www.canva.com/design/DAGRkGApn6w/NxPCu4jbKOs8oFhKhJsYqQ/view' },
+  { name: 'High School Portfolio', url: 'https://www.canva.com/design/DAG7eN6jOc4/qOgTMTfTQrwibkzgJdT5uw/view' }
+]
+
 const socialLinks = [
   {
     name: 'GitHub',
@@ -66,12 +90,37 @@ const socialLinks = [
         >
           View Experience
         </a>
-        <a
-          href="#contact"
-          class="px-8 py-3 border border-primary-500 text-primary-400 hover:bg-primary-500/10 font-semibold rounded-lg transition-all duration-300"
-        >
-          Contact Me
-        </a>
+        <div ref="dropdownRef" class="relative">
+          <button
+            @click.stop="isDropdownOpen = !isDropdownOpen"
+            class="px-8 py-3 border border-primary-500 text-primary-400 hover:bg-primary-500/10 font-semibold rounded-lg transition-all duration-300 flex items-center gap-2"
+          >
+            See More Profile
+            <svg
+              :class="['w-4 h-4 transition-transform', isDropdownOpen ? 'rotate-180' : '']"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div
+            v-if="isDropdownOpen"
+            class="absolute top-full mt-2 left-0 right-0 bg-slate-800 border border-slate-700 rounded-lg overflow-hidden shadow-xl"
+          >
+            <a
+              v-for="link in profileLinks"
+              :key="link.name"
+              :href="link.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block px-4 py-3 text-slate-300 hover:bg-primary-500/20 hover:text-white transition-colors text-sm"
+            >
+              {{ link.name }}
+            </a>
+          </div>
+        </div>
       </div>
 
       <!-- Social Links -->
