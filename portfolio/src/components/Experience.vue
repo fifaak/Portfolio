@@ -2,18 +2,6 @@
 import { ref, onMounted } from 'vue'
 import SectionTitle from './SectionTitle.vue'
 
-interface Experience {
-  period: string
-  title: string
-  company: string
-  description: string
-  achievement: string
-  type: string
-  logo: string
-  details: string[]
-  tags?: string[]
-}
-
 const isVisible = ref(false)
 const sectionRef = ref<HTMLElement | null>(null)
 const expandedIndex = ref<number | null>(null)
