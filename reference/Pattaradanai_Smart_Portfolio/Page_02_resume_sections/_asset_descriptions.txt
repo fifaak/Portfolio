@@ -1,0 +1,2 @@
+--- Asset Context Map for Page_02_resume_sections ---
+p02_01_resume_sections.png = Here are the bounding box detections: ```json [   {"box_2d": [73, 67, 907, 932], "label": "สารบัญ\nหน้าที\nรายละเอียด\n1\nประวัติส่วนตัว\n2\nStatement of purpose (SOP)\n3\nCo-founder of Uphasia\n4\nผลงานระดับประเทศและโอลิมปิก\n5-7\nผลงานระดับประเทศและภูมิภาค\n8\nผลงานที่โดดเด่นเพิ่มเติม\n9\nกิจกรรมและจิตอาสา"} ] ``` A table of contents listing "Personal history" to "Activities and volunteer work" across nine pages.

@@ -1,0 +1,4 @@
+--- Asset Context Map for Page_04_statement_of_purpose ---
+p04_01_statement_of_purpose.png = Here are the bounding box detections: ```json [   {"box_2d": [785, 65, 903, 345], "label": "U.4"},   {"box_2d": [790, 73, 898, 339], "label": "ฝึกซ้อม 300 ชม++\n= ตรวจสอบสิ่งแรก"},   {"box_2d": [712, 744, 954, 909], "label": "U.6"} ] ``` Here are the descriptions: - **U.4:** A screenshot of a group of people, labeled as "ฝึกซ้อม 300 ชม++" - **U.6:** A photo of 3 people standing in front of a wall.
+p04_02_statement_of_purpose.png = - A photo of a team being interviewed. It is from section U.6 of the portfolio.
+p04_03_statement_of_purpose.png = Here are the descriptions of the cropped image based on the full page:  **Image 1:** A photo of a robotics competition, labeled "ฝึกซ้อม 300 ชม++ = ตกรอบตั้งแต่รอบแรก."  **Image 2:** A photo of students at a robotics competition.

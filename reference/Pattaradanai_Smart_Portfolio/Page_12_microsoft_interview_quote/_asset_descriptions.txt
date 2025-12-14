@@ -1,0 +1,2 @@
+--- Asset Context Map for Page_12_microsoft_interview_quote ---
+p12_01_microsoft_interview_quote.png = Here's a description of the asset within the full page:  A photo of Pattaradanai Akkharat standing in front of a Microsoft sign, with a quote attributed to him below.

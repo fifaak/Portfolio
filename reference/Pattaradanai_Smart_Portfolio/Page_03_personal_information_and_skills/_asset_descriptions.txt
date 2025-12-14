@@ -1,0 +1,8 @@
+--- Asset Context Map for Page_03_personal_information_and_skills ---
+p03_01_personal_information_and_skills.png = A section on academic qualifications featuring school logos and a GPA of 3.90.
+p03_02_personal_information_and_skills.png = A photo of the student featured in the portfolio, found within the "Education Background" section at the top.
+p03_03_personal_information_and_skills.png = Here's a description of the cropped asset within the full page:  A school crest, representing "ระดับมัธยมศึกษาตอนต้น" (lower secondary education) at โรงเรียนธัญบุรี (Thanyaburi School).
+p03_04_personal_information_and_skills.png = The logo of Saraburi Wittayakhom School, found under the "Educational Background" section.
+p03_05_personal_information_and_skills.png = Here's the description of the cropped asset:  The logo for โรงเรียนอยุธยาวิทยาลัย, a school located in the lower portion of the page.
+p03_06_personal_information_and_skills.png = A logo representing "ระดับชั้นมัธยมศึกษาตอนต้น โรงเรียนสระบุรีวิทยาคม" (Lower Secondary Education Level, Saraburi Wittayakhom School).
+p03_07_personal_information_and_skills.png = Here's a description of the cropped asset based on the provided information:  The GitHub icon within the "ช่องทางการติดต่อ" (Contact Channels) section of the portfolio.

@@ -1,0 +1,2 @@
+--- Asset Context Map for Page_01_portfolio_page_design ---
+p01_01_portfolio_page_design.png = A photo of a student holding a laptop on his head, an image from a portfolio.
