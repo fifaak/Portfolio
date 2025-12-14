@@ -26,7 +26,7 @@ const experiences = [
     description: 'Leading government technology initiatives and digital transformation projects.',
     achievement: 'Reduced workload by automating document review with AI',
     type: 'work',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Garuda_Emblem_of_Thailand.svg/200px-Garuda_Emblem_of_Thailand.svg.png'
+    logo: 'https://pmuc.or.th/wp-content/uploads/2025/12/pmuc-th-logo.png'
   },
   {
     period: 'Jul 2025 - Sep 2025',
@@ -35,7 +35,7 @@ const experiences = [
     description: 'Research and development of machine learning solutions for energy optimization.',
     achievement: 'Engineered WattGraphNet achieving 40%+ cost savings',
     type: 'work',
-    logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/c5/Walailak_University_Logo.svg/200px-Walailak_University_Logo.svg.png'
+    logo: 'https://i0.wp.com/engineer.wu.ac.th/wp-content/uploads/2020/07/03-standard-abbreviation.png?fit=819%2C577&ssl=1'
   },
   {
     period: '2023 - Jan 2025',
@@ -44,7 +44,7 @@ const experiences = [
     description: 'Co-founded healthtech startup focused on AI-powered solutions for aphasia patients.',
     achievement: 'Developed "Uphasia Workflow" integrating Typhoon 1.5x LLM',
     type: 'work',
-    logo: '/images/uphasia-logo.png'
+    logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQEZuhJGLnStHA/company-logo_200_200/company-logo_200_200/0/1710917170075?e=2147483647&v=beta&t=FH0vKI4Alf14edphP2suSZ5qnqTPT5ztPUxfUa40xWk'
   },
   {
     period: 'Teaching Experience',
@@ -53,7 +53,7 @@ const experiences = [
     description: 'Teaching AI/ML fundamentals, mentoring students in project development and competition preparation.',
     achievement: 'Mentored students in AI/ML fundamentals and project development',
     type: 'teaching',
-    logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Mahidol_University_%28emblem%29.svg/200px-Mahidol_University_%28emblem%29.svg.png'
+    logo: 'https://avatars.githubusercontent.com/u/99741955?s=200&v=4'
   }
 ]
 </script>

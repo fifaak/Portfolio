@@ -15,8 +15,8 @@ import Navbar from './components/Navbar.vue'
     <main>
       <Hero />
       <About />
-      <Skills />
       <Experience />
+      <Skills />
       <Projects />
       <Awards />
       <Contact />

@@ -22,55 +22,55 @@ const awards = [
   {
     title: 'SuperAI Engineer SS5',
     achievement: 'Bronze Medal & Outstanding Poster',
-    logo: 'https://superai.aiat.or.th/wp-content/uploads/2023/06/cropped-Super-AI-Engineer-Logo-1.png',
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA4onbPkuhkcJIM4SDi9eGWZOs3MT6yCm_xw&s',
     highlight: true
   },
   {
     title: 'Siriraj Hackathon 2023',
     achievement: '2nd Runner-up (420 teams → Top 10)',
-    logo: 'https://www1.si.mahidol.ac.th/sirirajhackathon/wp-content/uploads/2023/06/logo-siriraj-hackathon-2023.png',
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkmG7LxM8amn4launEjuFAzDNohKst79t0dA&s',
     highlight: true
   },
   {
     title: 'GISTDA School Satellite Competition 2024',
     achievement: 'Winner (1st Place)',
-    logo: 'https://www.gistda.or.th/assets/img/logo/logo-gistda.png',
+    logo: 'https://yt3.googleusercontent.com/StU-KSWrVV-iLbCRGbHtDsn_nNGOj3E-p-FrnA5pUY29Vwn-fswXaVJZkp08B4pGAc5X5gjZ=s900-c-k-c0x00ffffff-no-rj',
     highlight: true
   },
   {
     title: 'Thailand ICT Award 2024',
     achievement: 'Finalist - AI R&D Category',
-    logo: 'https://www.depa.or.th/storage/app/media/Logo/depa-logo.png',
+    logo: 'https://www.thaipr.net/wp-content/uploads/2022/07/logo-TICTA-Awards-f75750b4.jpg',
     highlight: false
   },
   {
     title: 'Global Youth Entrepreneurship Challenge 2024',
     achievement: 'Top 10 Global',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/200px-Google_2015_logo.svg.png',
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmbQDzXTBH_NVOvQpMNs2bwhav6zNlOMftpA&s',
     highlight: true
   },
   {
     title: 'AI Builders 3',
     achievement: 'Outstanding AI Project (500 → 45 teams)',
-    logo: 'https://ai-builders.github.io/assets/img/ai-builders-logo.png',
+    logo: 'https://avatars.githubusercontent.com/u/99741955?s=200&v=4',
     highlight: true
   },
   {
     title: 'TechBite 5.0',
     achievement: 'Received 850,000 THB Funding',
-    logo: 'https://nia.or.th/frontend/assets/images/logo/logo-nia.png',
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMSxRrjZwMMwU22hT-fhu0CSvigaDkbEpM5g&s',
     highlight: false
   },
   {
     title: 'Mental Health Hackathon 2024',
     achievement: '1st Runner-up',
-    logo: 'https://www.dmh.go.th/images/logo_dmh.png',
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCecsS36duZf54LVGqfWDy7aDyRGT594nquw&s',
     highlight: false
   },
   {
     title: 'Typhoon Hackathon 2024',
     achievement: 'Finalist (84 teams → Top 12)',
-    logo: 'https://opentyphoon.ai/logo.png',
+    logo: 'https://www.scb10x.com/images/logo.png',
     highlight: false
   }
 ]
@@ -96,7 +96,7 @@ const awards = [
         >
           <div class="flex items-start gap-4">
             <div
-              class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0 overflow-hidden p-1"
+              class="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0 overflow-hidden"
             >
               <img
                 :src="award.logo"

@@ -23,7 +23,7 @@ const socialLinks = [
     <!-- Banner Background -->
     <div class="absolute inset-0">
       <img 
-        src="/images/banner.jpg" 
+        src="/images/profile/banner.jpg" 
         alt="Banner" 
         class="w-full h-full object-cover"
       />
@@ -39,7 +39,7 @@ const socialLinks = [
       <div class="fade-in mb-8">
         <div class="w-36 h-36 mx-auto rounded-full bg-gradient-to-br from-primary-500 to-purple-600 p-1 glow">
           <img 
-            src="/images/profile.jpg" 
+            src="/images/profile/profile.jpg" 
             alt="Pattaradanai Akkharat"
             class="w-full h-full rounded-full object-cover"
           />
