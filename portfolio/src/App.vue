@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Hero from './components/Hero.vue'
+import AwardsMarquee from './components/AwardsMarquee.vue'
 import About from './components/About.vue'
 import Skills from './components/Skills.vue'
 import Experience from './components/Experience.vue'
@@ -14,11 +15,12 @@ import Navbar from './components/Navbar.vue'
     <Navbar />
     <main>
       <Hero />
+      <AwardsMarquee />
       <About />
       <Experience />
       <Skills />
-      <Projects />
       <Awards />
+      <Projects />
       <Contact />
     </main>
   </div>
