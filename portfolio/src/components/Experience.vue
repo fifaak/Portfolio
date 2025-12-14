@@ -2,6 +2,18 @@
 import { ref, onMounted } from 'vue'
 import SectionTitle from './SectionTitle.vue'
 
+interface Experience {
+  period: string
+  title: string
+  company: string
+  description: string
+  achievement: string
+  type: string
+  logo: string
+  details: string[]
+  tags?: string[]
+}
+
 const isVisible = ref(false)
 const sectionRef = ref<HTMLElement | null>(null)
 const expandedIndex = ref<number | null>(null)
@@ -31,6 +43,7 @@ const experiences = [
     description: 'Leading government technology initiatives and digital transformation projects.',
     achievement: 'Reduced workload by automating document review with AI',
     type: 'work',
+    tags: ['Full-time', 'Hybrid'],
     logo: 'https://pmuc.or.th/wp-content/uploads/2025/12/pmuc-th-logo.png',
     details: [
       'Led cross-functional team of 5+ members for AI document automation',
@@ -46,6 +59,7 @@ const experiences = [
     description: 'Research and development of machine learning solutions for energy optimization.',
     achievement: 'Engineered WattGraphNet achieving 40%+ cost savings',
     type: 'work',
+    tags: ['Contract', 'Remote'],
     logo: 'https://i0.wp.com/engineer.wu.ac.th/wp-content/uploads/2020/07/03-standard-abbreviation.png?fit=819%2C577&ssl=1',
     details: [
       'Developed WattGraphNet using Graph Neural Networks for energy prediction',
@@ -61,6 +75,7 @@ const experiences = [
     description: 'Co-founded healthtech startup focused on AI-powered solutions for aphasia patients.',
     achievement: 'Developed "Uphasia Workflow" integrating Typhoon 1.5x LLM',
     type: 'work',
+    tags: ['Co-founder', 'Full-time'],
     logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQEZuhJGLnStHA/company-logo_200_200/company-logo_200_200/0/1710917170075?e=2147483647&v=beta&t=FH0vKI4Alf14edphP2suSZ5qnqTPT5ztPUxfUa40xWk',
     details: [
       'Co-founded startup and led product development from ideation to launch',
@@ -77,6 +92,7 @@ const experiences = [
     description: 'Teaching AI/ML fundamentals, mentoring students in project development and competition preparation.',
     achievement: 'Mentored students in AI/ML fundamentals and project development',
     type: 'teaching',
+    tags: ['Part-time'],
     logo: 'https://avatars.githubusercontent.com/u/99741955?s=200&v=4',
     details: [
       'Taught AI/ML fundamentals to 50+ students at AI Builders 5',
@@ -132,7 +148,18 @@ const experiences = [
                   />
                 </div>
                 <div class="flex-1">
-                  <span class="text-primary-400 text-sm font-medium">{{ exp.period }}</span>
+                  <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mb-1">
+                    <span class="text-primary-400 text-sm font-medium">{{ exp.period }}</span>
+                    <div class="flex items-center gap-2" v-if="exp.tags">
+                      <span
+                        v-for="tag in exp.tags"
+                        :key="tag"
+                        class="px-2 py-0.5 rounded-full bg-slate-700/50 border border-slate-600/50 text-xs text-slate-300"
+                      >
+                        {{ tag }}
+                      </span>
+                    </div>
+                  </div>
                   <h3 class="text-xl font-bold text-white mt-1">{{ exp.title }}</h3>
                   <p class="text-slate-400 text-sm mt-1">{{ exp.company }}</p>
                 </div>
