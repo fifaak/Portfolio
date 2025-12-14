@@ -90,7 +90,7 @@ const socialLinks = [
         >
           View Experience
         </a>
-        <div ref="dropdownRef" class="relative">
+        <div ref="dropdownRef" class="relative z-[100]">
           <button
             @click.stop="isDropdownOpen = !isDropdownOpen"
             class="px-8 py-3 border border-primary-500 text-primary-400 hover:bg-primary-500/10 font-semibold rounded-lg transition-all duration-300 flex items-center gap-2"
@@ -107,7 +107,7 @@ const socialLinks = [
           </button>
           <div
             v-if="isDropdownOpen"
-            class="absolute top-full mt-2 left-0 right-0 rounded-lg overflow-hidden shadow-2xl z-50"
+            class="absolute top-full mt-2 left-0 right-0 rounded-lg overflow-hidden shadow-2xl z-[9999]"
             style="background-color: #1e293b;"
           >
             <a
